@@ -1,0 +1,12 @@
+# Copyright 2022 Google LLC
+
+package(default_visibility = ["//visibility:private"])
+
+# Remember to build with env var BAZEL_CXXOPTS="-std=c++17"
+cc_binary(
+  name = "small_directpath_example",
+  srcs = ["small_directpath_example.cc"],
+  deps = [
+     "@google_cloud_cpp//:experimental-storage-grpc",
+  ]
+)
